@@ -1,6 +1,6 @@
 # UART HID library by BeBoX (c) 2021
 # ----------------------------------
-#
+# 
 # Keyboard COMMANDS over UART
 # PRESS:keycode : press   key              ex. PRESS:0x2c
 # RLEAS:keycode : release key              ex. RLEAS:0x2c
@@ -9,9 +9,10 @@
 # ECRIT:String  : type a string            ex. WRITE:Hello World! method ALTGR + ascii code (seem to work only in windows)
 # Mouse Commands
 # MMOVE:x,y,wheel                          ex. MMOVE:x=-10,y=2
-# MCLIC:button (1,2 or 4)                  ex. MCLIC:1   
-# MPRES:button (1,2 or 4)                  ex. MPRES:2
-# MRLEA:button (1,2 or 4)                  ex. MRLEA:2
+# MCLIC:button (1,2 or 4)                  ex. MCLIC:1   1= LEFT button
+# MPRES:button (1,2 or 4)                  ex. MPRES:2   2= RIGHT button
+# MRLEA:button (1,2 or 4)                  ex. MRLEA:2   4= Wheel button
+# ---------------------------------
 import time
 
 def uart_command(command):
